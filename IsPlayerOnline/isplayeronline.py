@@ -1,5 +1,4 @@
-import requests
-import os
+import requests, os, platform
 
 player = input("What player would you like to check the online status of? ")
 apikey = os.getenv("HYPIXEL_API_KEY")
@@ -20,3 +19,4 @@ if resp["player"]["lastLogin"] < resp["player"]["lastLogout"]:
     print("Player is not online")
 else:
     print("Player is online")
+input("Press Enter to end program")
